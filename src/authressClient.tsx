@@ -7,11 +7,11 @@ try {
     // * Configure the default Authress application at https://authress.io/app/#/settings?focus=applications&applicationId=app_default
     // * Create a new application at https://authress.io/app/#/settings?focus=applications
     // * Or Create an application using the quick setup flow: https://authress.io/app/#/settings?focus=quick&flow=authentication
-    applicationId: 'app_default',
+    applicationId: 'app_xbyzPSbYW869HmfGZvTHVu',
 
     // Create a custom domain: https://authress.io/app/#/settings?focus=domain (https://authress.company.com)
     // * OR use the default one for your account: https://authress.io/app/#/api?route=overview (https://ACCOUNT_ID.login.authress.io)
-    authressApiUrl: '',
+    authressApiUrl: 'https://acc-eto1sosrtvnwn.api-ap-east.authress.io',
   });
 
   loginClient.userSessionExists().then(userIsLoggedIn => {

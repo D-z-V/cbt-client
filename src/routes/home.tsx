@@ -32,16 +32,9 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://authress.io" target="_blank">
-          <img src={authressLogo} className="logo" alt="Authress logo" />
-        </a>
-        <a href="https://authress.io/knowledge-base/docs/SDKs/javascript#starter-kits" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+
       
-      <h1>Authress + React</h1>
+      <h1>Social CBT</h1>
 
       {/* <Openapi /> */}
       <div
@@ -92,7 +85,6 @@ function App() {
           </div>
         )}
       </div>
-      <p className="read-the-docs">Click on the Authress logo to learn more</p>
     </div>
   );
 }
