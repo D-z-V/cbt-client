@@ -1,3 +1,14 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import TestPage from '../components/testportal';
+// import Home from './home';
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Home/>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import { useEffect, useState } from 'react';
