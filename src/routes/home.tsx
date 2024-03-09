@@ -9,7 +9,10 @@ import Openapi from './openapi';
 
 import React from 'react';
 import Button from '@mui/material/Button';
-import TestPage from '../../components/testportal';
+import TestPage from '../components/testportal';
+import { Box } from '@mui/material';
+import ResponsiveAppBar from '../components/appbar';
+import CollapsibleTable from '../components/browsetests';
 
 function App() {
   const navigate = useNavigate();
@@ -30,6 +33,7 @@ function App() {
         authressLoginClient.userSessionExists().then((userIsLoggedIn) => {
           setUserProfile(authressLoginClient.getUserIdentity());
           console.log('User is Logged In', userIsLoggedIn, userProfile);
+          console.log('User Profile', userProfile);
         });
       }
     }
@@ -43,13 +47,26 @@ function App() {
 
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      {!showTestPage ? (
-        <Button variant="contained" onClick={handleCreateTaskClick}>Create Task</Button>
-      ) : (
-        <TestPage />
-      )}
-    </div>
+    <>
+    {!userProfile && 
+      <button style={{ marginRight: '1rem' }} onClick={login}>
+        Login
+      </button>
+    }
+    {userProfile && (
+      <>
+      <ResponsiveAppBar userProfile = {userProfile} logout = {logout} setShowTestPage = {setShowTestPage} />
+          <div style={{ display: 'flex', justifyContent: 'center', }}>
+            {!showTestPage ? (
+              <CollapsibleTable />
+            ) : (
+              <TestPage />
+            )}
+          </div>
+        </> 
+    )}
+
+    </>
   );
 }
 

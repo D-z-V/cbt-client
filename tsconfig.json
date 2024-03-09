@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "components/testportal.tsx"],
+  "include": ["src", "src/components/testportal.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

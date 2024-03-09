@@ -90,43 +90,43 @@ const TestPage: React.FC = () => {
     ]);
   };
 
-//   const manualdata =  [
-//     {
-//         "q": "A uniform rod AB of length 2L is maintained at a temperature difference of 120\u00b0C. A bent rod PQ of the same cross-section and length 2 is connected across AB. The temperature difference between P and Q in the steady state is close to:",
-//         "o1": "45\u00b0C",
-//         "o2": "60\u00b0C",
-//         "o3": "75\u00b0C",
-//         "o4": "35\u00b0C"
-//     },
-//     {
-//         "q": "Two identical beakers A and B contain equal volumes of two different liquids at 60\u00b0C each and are left to cool down. The liquid in A has a density of 8 x 10^2 kg/m^3 and a specific heat of 2000 J kg^-1 K^-1, while the liquid in B has a density of 10^3 kg m^-3 and a specific heat of 4000 J kg^-1 K^-1. Which of the following graphs schematically shows the temperature difference between the two beakers as a function of time?",
-//         "o1": "",
-//         "o2": "",
-//         "o3": "",
-//         "o4": ""
-//     },
-//     {
-//         "q": "A heat source at T = 10^3 K is connected to another heat reservoir at T = 10^2 K by a copper slab which is 1 m thick. Given that the thermal conductivity of copper is 0.1 WK^-1 m^-1, the energy flux through it in the steady state is:",
-//         "o1": "90 Wm^-2",
-//         "o2": "65 Wm^-2",
-//         "o3": "120 Wm^-2",
-//         "o4": "200 Wm^-2"
-//     },
-//     {
-//         "q": "Two materials having coefficients of thermal conductivity 3K and K, and thickness d and 3d, respectively, are joined to form a slab as shown in the figure. The temperatures of the outer surfaces are 01 and 02, respectively, with 02 > 01. The temperature at the interface is:",
-//         "o1": "$\\frac{01+02}{2}$",
-//         "o2": "$\\frac{2 \\times 01 + 3 \\times 02}{5}$",
-//         "o3": "$\\frac{3 \\times 01 + 2 \\times 02}{5}$",
-//         "o4": "$\\frac{01+02}{3}$"
-//     },
-//     {
-//         "q": "A cylinder of radius R is surrounded by a cylindrical shell of inner radius R and outer radius 2R. The thermal conductivity of the material of the inner cylinder is K1 and that of the outer cylinder is K2. Assuming no loss of heat, the effective thermal conductivity of the system for heat flowing along the length of the cylinder is:",
-//         "o1": "K1 + K2",
-//         "o2": "2K1 + 3K2",
-//         "o3": "K1 + 3K2",
-//         "o4": "4(K1 + K2)"
-//     }
-// ]
+  //   const manualdata =  [
+  //     {
+  //         "q": "A uniform rod AB of length 2L is maintained at a temperature difference of 120\u00b0C. A bent rod PQ of the same cross-section and length 2 is connected across AB. The temperature difference between P and Q in the steady state is close to:",
+  //         "o1": "45\u00b0C",
+  //         "o2": "60\u00b0C",
+  //         "o3": "75\u00b0C",
+  //         "o4": "35\u00b0C"
+  //     },
+  //     {
+  //         "q": "Two identical beakers A and B contain equal volumes of two different liquids at 60\u00b0C each and are left to cool down. The liquid in A has a density of 8 x 10^2 kg/m^3 and a specific heat of 2000 J kg^-1 K^-1, while the liquid in B has a density of 10^3 kg m^-3 and a specific heat of 4000 J kg^-1 K^-1. Which of the following graphs schematically shows the temperature difference between the two beakers as a function of time?",
+  //         "o1": "",
+  //         "o2": "",
+  //         "o3": "",
+  //         "o4": ""
+  //     },
+  //     {
+  //         "q": "A heat source at T = 10^3 K is connected to another heat reservoir at T = 10^2 K by a copper slab which is 1 m thick. Given that the thermal conductivity of copper is 0.1 WK^-1 m^-1, the energy flux through it in the steady state is:",
+  //         "o1": "90 Wm^-2",
+  //         "o2": "65 Wm^-2",
+  //         "o3": "120 Wm^-2",
+  //         "o4": "200 Wm^-2"
+  //     },
+  //     {
+  //         "q": "Two materials having coefficients of thermal conductivity 3K and K, and thickness d and 3d, respectively, are joined to form a slab as shown in the figure. The temperatures of the outer surfaces are 01 and 02, respectively, with 02 > 01. The temperature at the interface is:",
+  //         "o1": "$\\frac{01+02}{2}$",
+  //         "o2": "$\\frac{2 \\times 01 + 3 \\times 02}{5}$",
+  //         "o3": "$\\frac{3 \\times 01 + 2 \\times 02}{5}$",
+  //         "o4": "$\\frac{01+02}{3}$"
+  //     },
+  //     {
+  //         "q": "A cylinder of radius R is surrounded by a cylindrical shell of inner radius R and outer radius 2R. The thermal conductivity of the material of the inner cylinder is K1 and that of the outer cylinder is K2. Assuming no loss of heat, the effective thermal conductivity of the system for heat flowing along the length of the cylinder is:",
+  //         "o1": "K1 + K2",
+  //         "o2": "2K1 + 3K2",
+  //         "o3": "K1 + 3K2",
+  //         "o4": "4(K1 + K2)"
+  //     }
+  // ]
 
   const handleInputChange = (
     sectionIndex: number,
@@ -195,11 +195,11 @@ const TestPage: React.FC = () => {
 
       console.log('OCR Processed:', response.data);
 
-     const manualdata = JSON.parse(response.data)
-   
+      const manualdata = JSON.parse(response.data)
+
 
       const sectionData = {
-        name: `Section 1`, 
+        name: `Section 1`,
         marks: 0,
         schema: '',
         questionType: '',
@@ -208,11 +208,11 @@ const TestPage: React.FC = () => {
           options: [data.o1, data.o2, data.o3, data.o4],
           image: null,
           isImage: false,
-          correctAnswer: '', 
+          correctAnswer: '',
         })),
       };
 
-      setSections([sectionData]); 
+      setSections([sectionData]);
 
       setSelectedInputMethod(InputMethod.MANUAL);
 
@@ -250,7 +250,7 @@ const TestPage: React.FC = () => {
     // Add preview logic here
   };
 
-  const boxWidth = `${sections.length * 200 + 600}px`;
+  const boxWidth = `${sections.length * 200 + 1000}px`;
 
   return (
     <Box
@@ -261,6 +261,7 @@ const TestPage: React.FC = () => {
       borderRadius={4}
       bgcolor="#f7f7f7"
       color="#000"
+      mt={4}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <h1>Create Test</h1>
@@ -379,9 +380,8 @@ const TestPage: React.FC = () => {
                     <div>
                       <strong>Question {questionIndex + 1}:</strong>
                       <Textarea
-                        placeholder={`Question ${
-                          questionIndex + 1
-                        }...`}
+                        placeholder={`Question ${questionIndex + 1
+                          }...`}
                         style={{ width: '100%', minHeight: '100px' }}
                         value={question.question}
                         onChange={(e) =>
@@ -476,7 +476,13 @@ const TestPage: React.FC = () => {
               </Box>
             </Box>
           ))}
-          <Box mt={2} display="flex" justifyContent="flex-end">
+
+              <Box mt={2} sx={{
+                display: 'flex',
+                justifyContent: "flex-end"
+              }}
+    
+              >
             <Button
               variant="contained"
               onClick={handleManualSubmit}
@@ -489,82 +495,83 @@ const TestPage: React.FC = () => {
               Submit
             </Button>
             <Button
-        variant="contained"
-        onClick={handleClickOpen}
-        style={{
-          marginLeft: '10px',
-          backgroundColor: '#ff9800',
-          color: '#fff',
-        }}
-      >
-        Preview
-      </Button>
-      <Dialog
-        fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-      >
-        <AppBar sx={{ position: 'relative' }}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
+              variant="contained"
+              onClick={handleClickOpen}
+              style={{
+                marginLeft: '10px',
+                backgroundColor: '#ff9800',
+                color: '#fff',
+              }}
             >
-              <CloseIcon />
-            </IconButton>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Preview
-            </Typography>
-            {/* Add a cancel button to close the dialog */}
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              Cancel
             </Button>
-          </Toolbar>
-        </AppBar>
-        <List
-          sx={{
-            p: 5
-          }}
-        >
-          {/* Render the test data stored in the sections state */}
-          {sections.map((section, sectionIndex) => (
-            <div key={sectionIndex}
-            
+            </Box>
+            <Dialog
+              fullScreen
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={Transition}
             >
-              <Typography variant="h6">{section.name}</Typography>
-              {section.questions.map((question, questionIndex) => (
-                <div key={questionIndex}
-                style={{
-                  marginBottom: '40px'
-                }}
-                >
-                  <Typography variant="subtitle1">
-                  <MathJaxContext>
-                       <MathJax>
-                    {`Question ${questionIndex + 1}: ${question.question}`}
-                      </MathJax>
-                  </MathJaxContext>
+              <AppBar sx={{ position: 'relative' }}>
+                <Toolbar>
+                  <IconButton
+                    edge="start"
+                    color="inherit"
+                    onClick={handleClose}
+                    aria-label="close"
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                  <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                    Preview
                   </Typography>
-                  <ul>
-                    {question.options.map((option, optionIndex) => (
-                      <li key={optionIndex}>
-                                          <MathJaxContext>
-                       <MathJax inline dynamic>
-                        {`Option ${optionIndex + 1}: ${option}`}
-                                            </MathJax>
-                  </MathJaxContext></li>
+                  {/* Add a cancel button to close the dialog */}
+                  <Button autoFocus color="inherit" onClick={handleClose}>
+                    Cancel
+                  </Button>
+                </Toolbar>
+              </AppBar>
+              <List
+                sx={{
+                  p: 5
+                }}
+              >
+                {/* Render the test data stored in the sections state */}
+                {sections.map((section, sectionIndex) => (
+                  <div key={sectionIndex}
+
+                  >
+                    <Typography variant="h6">{section.name}</Typography>
+                    {section.questions.map((question, questionIndex) => (
+                      <div key={questionIndex}
+                        style={{
+                          marginBottom: '40px'
+                        }}
+                      >
+                        <Typography variant="subtitle1">
+                          <MathJaxContext>
+                            <MathJax>
+                              {`Question ${questionIndex + 1}: ${question.question}`}
+                            </MathJax>
+                          </MathJaxContext>
+                        </Typography>
+                        <ul>
+                          {question.options.map((option, optionIndex) => (
+                            <li key={optionIndex}>
+                              <MathJaxContext>
+                                <MathJax inline dynamic>
+                                  {`Option ${optionIndex + 1}: ${option}`}
+                                </MathJax>
+                              </MathJaxContext></li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          ))}
-        </List>
-      </Dialog>
-          </Box>
+                  </div>
+                ))}
+              </List>
+            </Dialog>
+
         </>
       )}
       {selectedInputMethod === InputMethod.PDF && (
@@ -578,11 +585,18 @@ const TestPage: React.FC = () => {
           />
           <div>
             <h2>Upload PDF</h2>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "space-between"
+                          }}
+                        >
             <input
               type="file"
               accept="application/pdf"
               onChange={handleFileChange}
             />
+          <div>
             <Button
               variant="contained"
               onClick={handlePDFSubmit}
@@ -605,6 +619,8 @@ const TestPage: React.FC = () => {
             >
               Preview
             </Button>
+            </div>
+            </Box>
           </div>
         </>
       )}
